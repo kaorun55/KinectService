@@ -23,17 +23,19 @@ namespace Coding4Fun.Kinect.KinectService.Samples.MetroSample
     public sealed partial class BlankPage : Page
     {
         ColorClient color = new ColorClient();
-
+        int counter = 0;
         public BlankPage()
         {
             this.InitializeComponent();
 
             color.ColorFrameReady += color_ColorFrameReady;
-            color.Connect( "", 8080 );
+            color.Connect("10.0.1.11", 4530);
         }
 
         void color_ColorFrameReady( object sender, Coding4Fun.Kinect.KinectService.Common.ColorFrameReadyEventArgs e )
         {
+            counter++;
+            textBlock.Text = counter.ToString();
             imageRgb.Source = e.ColorFrame.BitmapImage;
         }
 

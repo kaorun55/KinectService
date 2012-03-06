@@ -10,6 +10,7 @@ using Coding4Fun.Kinect.KinectService.Common;
 #if NETFX_CORE
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Storage.Streams;
+using Windows.Graphics.Imaging;
 #else
 using System.Net.Sockets;
 using System.Windows.Media.Imaging;
@@ -33,6 +34,7 @@ namespace Coding4Fun.Kinect.KinectService.MetroClient
 			{
                 var reader = new DataReader( Client.InputStream );
                 reader.InputStreamOptions = InputStreamOptions.Partial;
+                reader.ByteOrder = ByteOrder.LittleEndian;
 
                 while ( IsConnected ) {
                     await reader.LoadAsync( 4 );
@@ -52,25 +54,30 @@ namespace Coding4Fun.Kinect.KinectService.MetroClient
 					cfd.ImageFrame = br.ReadColorImageFrame();
 
                     MemoryStream msData = new MemoryStream( bytes, (int)ms.Position, (int)(ms.Length - ms.Position) );
-					Context.Send(delegate
-					{
-						if(cfd.Format == ImageFormat.Raw)
-							cfd.RawImage = ms.ToArray();
-						else
-						{
-							BitmapImage bi = new BitmapImage();
-                            bi.SetSource( msData.AsRandomAccessStream() );
+                    if (cfd.Format == ImageFormat.Raw)
+                    {
+                        cfd.RawImage = ms.ToArray();
+                    }
+                    else
+                    {
+                        InMemoryRandomAccessStream ras = new InMemoryRandomAccessStream();
+                        DataWriter dw = new DataWriter(ras.GetOutputStreamAt(0));
+                        dw.WriteBytes(msData.ToArray());
+                        await dw.StoreAsync();   
 
-							cfd.BitmapImage = bi;
-						}
+                        // Set to the image
+                        BitmapImage bImg = new BitmapImage();
+                        bImg.SetSource(ras);
+                        cfd.BitmapImage = bImg;
+                    }
 
-						ColorFrame = cfd;
-						args.ColorFrame = cfd;
+					ColorFrame = cfd;
+					args.ColorFrame = cfd;
 
-						if(ColorFrameReady != null)
-							ColorFrameReady(this, args);
-
-					}, null);
+                    if (ColorFrameReady != null)
+                    {
+                        ColorFrameReady(this, args);
+                    }
 				}
 			}
 			catch(IOException)

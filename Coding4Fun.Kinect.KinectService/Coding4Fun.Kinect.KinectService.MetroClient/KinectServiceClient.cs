@@ -51,13 +51,13 @@ namespace Coding4Fun.Kinect.KinectService.MetroClient
             Context = SynchronizationContext.Current;
         }
 
-        public async void Connect( string address, int port )
+        public void Connect( string address, int port )
 		{
             try {
                 Disconnect();
 
                 Client = new StreamSocket();
-                await Client.ConnectAsync( new HostName( address ), port.ToString(), SocketProtectionLevel.PlainSocket );
+                Client.ConnectAsync( new HostName( address ), port.ToString(), SocketProtectionLevel.PlainSocket );
                 isConnected = true;
 
                 if ( OnConnectionCompleted != null ) {

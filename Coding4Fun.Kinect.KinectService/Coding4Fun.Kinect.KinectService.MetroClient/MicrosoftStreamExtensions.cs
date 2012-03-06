@@ -13,8 +13,8 @@ namespace Coding4Fun.Kinect.KinectService.MetroClient
         public static IRandomAccessStream AsRandomAccessStream( this Stream stream )
         {
             var randomAccessStream = new InMemoryRandomAccessStream();
-            var outputStream = randomAccessStream.GetOutputStreamAt( 0 );
-            RandomAccessStream.CopyAsync( stream.AsInputStream(), outputStream );
+            var s = randomAccessStream.AsStreamForWrite();
+            stream.CopyTo(s);
             return randomAccessStream;
         }
     }
