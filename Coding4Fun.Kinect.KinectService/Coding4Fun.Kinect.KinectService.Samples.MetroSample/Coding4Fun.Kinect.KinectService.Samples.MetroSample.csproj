@@ -108,6 +108,14 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\Coding4Fun.Kinect.KinectService.Common\Coding4Fun.Kinect.KinectService.Common %28WinRT%29.csproj">
+      <Project>{f8bbd718-7cc0-4b2a-afa3-7f1fda9e5f3f}</Project>
+      <Name>Coding4Fun.Kinect.KinectService.Common %28WinRT%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coding4Fun.Kinect.KinectService.MetroClient\Coding4Fun.Kinect.KinectService.MetroClient.csproj">
+      <Project>{6fc9ff8c-05a5-458b-9e02-0e7299a42e05}</Project>
+      <Name>Coding4Fun.Kinect.KinectService.MetroClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\BindableBase.cs" />

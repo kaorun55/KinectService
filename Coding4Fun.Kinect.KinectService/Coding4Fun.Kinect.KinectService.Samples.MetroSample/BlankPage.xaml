@@ -8,6 +8,6 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundBrush}">
-
+        <Image Name="imageRgb" />
     </Grid>
 </Page>

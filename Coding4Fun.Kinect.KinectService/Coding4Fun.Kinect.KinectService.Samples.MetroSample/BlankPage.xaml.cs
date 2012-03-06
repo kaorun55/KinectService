@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Coding4Fun.Kinect.KinectService.MetroClient;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -21,9 +22,19 @@ namespace Coding4Fun.Kinect.KinectService.Samples.MetroSample
     /// </summary>
     public sealed partial class BlankPage : Page
     {
+        ColorClient color = new ColorClient();
+
         public BlankPage()
         {
             this.InitializeComponent();
+
+            color.ColorFrameReady += color_ColorFrameReady;
+            color.Connect( "", 8080 );
+        }
+
+        void color_ColorFrameReady( object sender, Coding4Fun.Kinect.KinectService.Common.ColorFrameReadyEventArgs e )
+        {
+            imageRgb.Source = e.ColorFrame.BitmapImage;
         }
 
         /// <summary>
