@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding4Fun.Kinect.KinectSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding4Fun.Kinect.KinectService.MetroClient", "Coding4Fun.Kinect.KinectService.MetroClient\Coding4Fun.Kinect.KinectService.MetroClient.csproj", "{6FC9FF8C-05A5-458B-9E02-0E7299A42E05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coding4Fun.Kinect.KinectService.Samples.MetroSample", "Coding4Fun.Kinect.KinectService.Samples.MetroSample\Coding4Fun.Kinect.KinectService.Samples.MetroSample.csproj", "{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -143,6 +145,36 @@ Global
 		{9AD0B64A-1EAC-43FB-BB71-A4DD4EBBC096}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9AD0B64A-1EAC-43FB-BB71-A4DD4EBBC096}.Release|x64.ActiveCfg = Release|Any CPU
 		{9AD0B64A-1EAC-43FB-BB71-A4DD4EBBC096}.Release|x86.ActiveCfg = Release|Any CPU
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|ARM.Build.0 = Debug|ARM
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|x64.ActiveCfg = Debug|x64
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|x64.Build.0 = Debug|x64
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|x64.Deploy.0 = Debug|x64
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|x86.ActiveCfg = Debug|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|x86.Build.0 = Debug|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Debug|x86.Deploy.0 = Debug|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|ARM.ActiveCfg = Release|ARM
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|ARM.Build.0 = Release|ARM
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|ARM.Deploy.0 = Release|ARM
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|Mixed Platforms.Deploy.0 = Release|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|x64.ActiveCfg = Release|x64
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|x64.Build.0 = Release|x64
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|x64.Deploy.0 = Release|x64
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|x86.ActiveCfg = Release|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|x86.Build.0 = Release|x86
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC}.Release|x86.Deploy.0 = Release|x86
 		{C367ED96-43BB-4BAB-BD95-5C48468B3150}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{C367ED96-43BB-4BAB-BD95-5C48468B3150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C367ED96-43BB-4BAB-BD95-5C48468B3150}.Debug|Any CPU.Build.0 = Debug|Any CPU
@@ -215,6 +247,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{54F57BAD-BD52-4FA4-B2AF-9D38B4B208B3} = {B73A7ECE-CB4A-46BF-A157-9C0C627D00C5}
+		{B69C09C9-04F5-480C-B0D3-B754E9E8EBFC} = {B73A7ECE-CB4A-46BF-A157-9C0C627D00C5}
 		{C367ED96-43BB-4BAB-BD95-5C48468B3150} = {B73A7ECE-CB4A-46BF-A157-9C0C627D00C5}
 	EndGlobalSection
 	GlobalSection(SubversionScc) = preSolution

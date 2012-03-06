@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+
+  <Identity Name="4c6b095b-e761-43d5-82ac-cce1307b5a0c"
+            Publisher="CN=かおるん"
+            Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>Coding4Fun.Kinect.KinectService.Samples.MetroSample</DisplayName>
+    <PublisherDisplayName>かおるん</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>Coding4Fun.Kinect.KinectService.Samples.MetroSample</Description>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="Coding4Fun.Kinect.KinectService.Samples.MetroSample.App">
+        <VisualElements
+            DisplayName="Coding4Fun.Kinect.KinectService.Samples.MetroSample"
+            Logo="Assets\Logo.png"
+            SmallLogo="Assets\SmallLogo.png"
+            Description="Coding4Fun.Kinect.KinectService.Samples.MetroSample"
+            ForegroundText="light"
+            BackgroundColor="#222222">
+            <DefaultTile ShowName="allLogos" />
+            <SplashScreen Image="Assets\SplashScreen.png" />
+        </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
