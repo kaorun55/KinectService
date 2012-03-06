@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Coding4Fun.Kinect.KinectService.ConsoleHost.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ColorPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4530</Value>
+    </Setting>
+    <Setting Name="DepthPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4531</Value>
+    </Setting>
+    <Setting Name="SkeletonPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4532</Value>
+    </Setting>
+    <Setting Name="AudioPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4533</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
